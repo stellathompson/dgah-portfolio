@@ -93,6 +93,12 @@ h1 .color-orange {
 
 } 
 
+.profile-img {
+    width: 200px;  /* Set a fixed width */
+    height: 200px; /* Set the same fixed height */
+    object-fit: cover; /* This is the "magic" that prevents stretching */
+    object-position: center; /* Ensures your face stays in the middle */
+}
 /* PHP Email Form Messages
 ------------------------------*/
 /* .php-email-form .error-message {
