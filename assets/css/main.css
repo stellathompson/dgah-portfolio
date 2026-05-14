@@ -14,7 +14,7 @@
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --nav-font: "Raleway",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -93,63 +93,6 @@ h1 .color-orange {
 
 } 
 
-.profile-img {
-    width: 200px;  /* Set a fixed width */
-    height: 200px; /* Set the same fixed height */
-    object-fit: cover; /* This is the "magic" that prevents stretching */
-    object-position: center; /* Ensures your face stays in the middle */
-}
-/* PHP Email Form Messages
-------------------------------*/
-/* .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /*--------------------------------------------------------------
 # Global Header
@@ -182,6 +125,33 @@ h1 .color-orange {
 /* .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 } */
+
+/* Custom styling to match the left-side logo */
+.navmenu .right-header-link {
+  font-size: 30px;              /* Matches your .header .logo h1 */
+  font-weight: 700;             /* Matches your .header .logo h1 */
+  color: #e3da95;               /* Change this to your desired color (e.g., Orange) */
+  text-decoration: none;
+  font-family: var(--nav-font);
+  transition: 0.3s;
+}
+
+/* Hover state */
+.navmenu .right-header-link:hover {
+  color: var(--nav-hover-color); /* Or a specific color like #ffffff */
+}
+
+/* Fix for Mobile: Ensures the link stays visible and doesn't hide inside a menu */
+@media (max-width: 1199px) {
+  .navmenu ul {
+    display: none !important;
+  }
+  
+  .navmenu .right-header-link {
+    font-size: 20px; /* Slightly smaller for mobile screens */
+    padding-right: 15px;
+  }
+}
 
 /* Global Header on Scroll
 ------------------------------*/
@@ -242,24 +212,6 @@ h1 .color-orange {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
-  .navmenu .active:before {
-    visibility: visible;
-    width: 25px;
-  }
 
   .navmenu li:hover>a,
   .navmenu .active,
@@ -509,41 +461,6 @@ h1 .color-orange {
 .footer .credits {
   font-size: 13px;
   padding-top: 5px;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -921,92 +838,6 @@ section,
 } */
 
 /*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-/* .testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  min-height: 320px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
-  position: relative;
-  z-index: 2;
-  border: 6px solid var(--background-color);
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 45px;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 15px 0 15px;
-  padding: 20px 20px 60px 20px;
-  background: var(--surface-color);
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-} */
-
-/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -1212,7 +1043,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-/* .portfolio .portfolio-filters {
+.portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
@@ -1319,12 +1150,12 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
-} */
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-/* .portfolio-details .portfolio-details-slider img {
+ .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
 
@@ -1381,7 +1212,7 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-} */
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -1519,4 +1350,52 @@ video {
 .video-caption {
   text-align: center; 
   margin-top: 10px; 
+}
+
+.header-secondary a {
+  /* Matching your font preferences */
+  font-size: 25px;               /* Slightly smaller than the 30px logo */
+  font-weight: 600;              /* Medium weight, not too bold */
+  font-family: var(--nav-font);  /* Or var(--default-font) */
+  
+  /* Color and Style */
+  color: #e3da95;                /* Your specific color */
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.header-secondary a:hover {
+  color: #e4debd;                /* A slightly darker shade for hover */
+  text-decoration: none;
+}
+
+/* Ensure it looks good on mobile */
+@media (max-width: 768px) {
+  .header-secondary a {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+}
+
+
+.profile-headshot {
+  /* Use pixels for exact sizing, or % for relative sizing */
+  max-width: 400px; 
+  
+  /* These lines keep it centered in the column */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Optional: adds a nice rounded corner to match a modern UX feel */
+  border-radius: 10px; 
+}
+
+/* Responsive adjustment: Make it look bigger/full-width on mobile */
+@media (max-width: 768px) {
+  .profile-headshot {
+    max-width: 80%; 
+    margin-top: 20px; /* Adds space between text and image on mobile */
+  }
 }
