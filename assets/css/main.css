@@ -1353,24 +1353,22 @@ video {
 }
 
 .header-secondary a {
-  /* Matching your font preferences */
-  font-size: 25px;               /* Slightly smaller than the 30px logo */
-  font-weight: 600;              /* Medium weight, not too bold */
-  font-family: var(--nav-font);  /* Or var(--default-font) */
+  font-size: 25px;
+  font-weight: 600;          
+  font-family: var(--nav-font);  
   
-  /* Color and Style */
-  color: #e3da95;                /* Your specific color */
+  color: #e3da95;    
   text-decoration: none;
   transition: 0.3s;
   display: inline-block;
 }
 
 .header-secondary a:hover {
-  color: #e4debd;                /* A slightly darker shade for hover */
+  color: #e4debd;           
   text-decoration: none;
 }
 
-/* Ensure it looks good on mobile */
+
 @media (max-width: 768px) {
   .header-secondary a {
     font-size: 16px;
@@ -1380,22 +1378,16 @@ video {
 
 
 .profile-headshot {
-  /* Use pixels for exact sizing, or % for relative sizing */
   max-width: 400px; 
-  
-  /* These lines keep it centered in the column */
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
-  /* Optional: adds a nice rounded corner to match a modern UX feel */
-  border-radius: 10px; 
+
 }
 
-/* Responsive adjustment: Make it look bigger/full-width on mobile */
 @media (max-width: 768px) {
   .profile-headshot {
     max-width: 80%; 
-    margin-top: 20px; /* Adds space between text and image on mobile */
+    margin-top: 20px;
   }
 }
