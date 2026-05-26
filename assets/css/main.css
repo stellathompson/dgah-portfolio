@@ -1044,7 +1044,7 @@ section,
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
-  padding: 0;
+  padding-bottom: 20px;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
@@ -1053,10 +1053,15 @@ section,
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
+  background-color:rgb(33, 50, 122);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 18px;
   font-weight: 500;
   margin: 0 10px;
+  border-radius: 20px;
   line-height: 1;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
@@ -1105,9 +1110,9 @@ section,
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: #e3da95;
 }
 
 .portfolio .portfolio-content .portfolio-info p {
@@ -1390,4 +1395,15 @@ video {
     max-width: 80%; 
     margin-top: 20px;
   }
+}
+
+.portfolio-content img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+.btn-close {
+  color: #fafafa;
 }
