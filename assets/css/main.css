@@ -23,7 +23,7 @@
   --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #b5f0cb; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ffc6d5; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: rgb(30, 42, 85); /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -716,128 +716,6 @@ section,
 } */
 
 /*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-/* .stats i {
-  background-color: var(--surface-color);
-  color: var(--accent-color);
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
-  width: 54px;
-  height: 54px;
-  font-size: 24px;
-  border-radius: 50px;
-  border: 2px solid var(--background-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
-.stats .stats-item {
-  background-color: var(--surface-color);
-  margin-top: -27px;
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  z-index: 0;
-}
-
-.stats .stats-item span {
-  font-size: 36px;
-  display: block;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.stats .stats-item p {
-  padding: 0;
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 16px;
-} */
-
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-/* .skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-} */
-
-/*--------------------------------------------------------------
-# Interests Section
---------------------------------------------------------------*/
-/* .interests .features-item {
-  background-color: var(--surface-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  position: relative;
-}
-
-.interests .features-item i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 0;
-}
-
-.interests .features-item h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.interests .features-item h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.interests .features-item:hover {
-  border-color: var(--accent-color);
-}
-
-.interests .features-item:hover h3 a {
-  color: var(--accent-color);
-} */
-
-/*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -895,150 +773,6 @@ section,
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-/* .services .service-item {
-  background-color: var(--surface-color);
-  text-align: center;
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  height: 100%;
-}
-
-.services .service-item .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: var(--accent-color);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.services .service-item .icon i {
-  color: var(--contrast-color);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item .icon::before {
-  position: absolute;
-  content: "";
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.services .service-item h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .service-item:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.services .service-item:hover .icon {
-  background: var(--surface-color);
-}
-
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
-
-.services .service-item:hover .icon::before {
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-}
-
-.services .service-item:hover h3,
-.services .service-item:hover p {
-  color: var(--contrast-color);
-} */
-
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-/* .service-details .services-list {
-  background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
-} */
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -1120,11 +854,11 @@ section,
   bottom: 10px;
   text-align: center;
   display: inline-block;
-  left: 0;
-  right: 0;
+  left: 5px;
+  right: 5px;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
 }
 
 .portfolio .portfolio-content .portfolio-info .preview-link,
@@ -1188,6 +922,7 @@ section,
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
+  color: #fec584;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1218,108 +953,6 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-/* .starter-section { */
-  /* Add your styles here */
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-/* .contact .info-item {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-}
-
-.contact .info-item .icon {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 2px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  line-height: 1;
-  margin: 4px 6px 0 0;
-  transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.contact .info-item .social-links a:hover {
-  color: var(--accent-color);
-}
-
-.contact .php-email-form {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-} */
 
 /* 
 Skip to main content link
